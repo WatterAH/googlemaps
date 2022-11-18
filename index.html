@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Google Maps API</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/map.ico">
+</head>
+
+<body onload="aviso()">
+    <div id="map"></div>
+
+    <div id="select">
+        <p>Algunos de mis lugares favoritos: </p>
+        <select id="lugares" onchange="places()">
+            <option value="18.9335026,-99.1999326">
+                Averanda
+            </option>
+            <option value="19.4387782,-99.2044655">
+                Antara
+            </option>
+            <option value="46.6179179,7.9876537">
+                Grindelwald
+            </option>
+            <option value="19.367586,-99.2613573">
+                Samara Shops
+            </option>
+        </select>
+    </div>
+
+
+    <div id="inputs">
+        <input type="number" placeholder="Latitud" id="lat">
+        <input type="number" placeholder="Longitud" id="long">
+        <button type="submit" onclick=" mark()" class="button">Enviar</button>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjnKhxIkr9B4aaMYSVXyrTEIaPkQ6jMvo&callback=iniciarMap"></script>
+</body>
+
+</html>
